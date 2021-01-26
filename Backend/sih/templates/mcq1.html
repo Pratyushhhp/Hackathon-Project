@@ -1,0 +1,1073 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+     <title>MCQ1</title>
+<!-- 
+
+Known Template 
+
+https://templatemo.com/tm-516-known
+
+-->
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="author" content="">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
+     <link rel="stylesheet" href="{% static 'css/font-awesome.min.css'%}">
+     <link rel="stylesheet" href="{% static 'css/owl.carousel.css'%}">
+     <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css'%}">
+
+
+
+     <!-- MAIN CSS -->
+     <link rel="stylesheet" href="{% static 'css/mcq1.css'%}">
+     
+</head>
+<body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+
+     <form method="POST">
+          {% csrf_token %}
+
+     <!-- PRE LOADER -->
+     <section class="preloader">
+          <div class="spinner">
+
+               <span class="spinner-rotate"></span>
+               
+          </div>
+     </section>
+
+
+     <!-- MENU -->
+     <section class="navbar custom-navbar navbar-fixed-top" role="navigation">
+          <div class="container">
+
+               <div class="navbar-header">
+                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                    </button>
+
+                    <!-- lOGO TEXT HERE -->
+                    <a href="index" class="navbar-brand">Questrite</a>
+               </div>
+
+               <!-- MENU LINKS -->
+               <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-nav-first">
+                         <li><a href="index" class="smoothScroll">Home</a></li>
+                         <li><a href="about" class="smoothScroll">About Us</a></li>
+                         <li><a href="analyst" class="smoothScroll">Psychometric Analysts</a></li>
+                         <li><a href="ourservices" class="smoothScroll">Our Tests</a></li>
+                         <li><a href="reviews" class="smoothScroll">Reviews</a></li>
+                         <li><a href="contactus" class="smoothScroll">Contact Us</a></li>
+                         
+                         <li><a href="faqs" class="smoothScroll">FAQs</a></li>
+                         {% if user.is_authenticated %}
+                         <li>Hello, {{user.first_name}}</li>
+                         <li><a href="logout" class="smoothScroll">Log out</a></li>
+                         {% else %}
+                         <li><a href="signup" class="smoothScroll">Sign Up</a></li>
+                         {% endif %}
+
+                    </ul>
+
+                    
+               </div>
+
+          </div>
+     </section>
+
+     <h3 >
+         
+          <div style="text-align: right"  id="google_translate_element"></div>
+          </h3>
+     
+          <script type="text/javascript">
+          function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+          }
+          </script>
+          
+          <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+ <!-- TESTIMONIAL -->
+     <section id="testimonial">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-12 col-sm-12">
+                         
+                         
+                               <div class="section-title">
+                              <h2> School Students <small>All the best!</small></h2>
+                         </div>
+
+                              
+
+                        
+
+                              <div class="col-md-4 col-sm-4">
+                                   <div class="item">
+      <tr>
+         <h3>
+              <td>1. The equation x^2 +3x +1= 0 is know as</td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP1" value="a" required>  a) Algebraic equation
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP1" value="b) Polynomial equation"> b) Polynomial equation
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP1" value="c) Cubic equation">  c) Cubic equation
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP1" value="d) Transcendental equation  ">  d) Transcendental equation  
+              </td>
+         </h3>
+    </tr>
+    <br>
+                                      
+
+                             <tr>
+         <h3>
+              <td>2. Which of these measures used to analyze the central tendency of data?</td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP2" value=" a) Mean and normal distribution">  a) Mean and normal distribution
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP2" value="b" required> b) Mean, median and mode
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP2" value="c) Range and mean">  c) Range and mean
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP2" value="d) Median, range and normal distribution ">  d) Median, range and normal distribution  
+              </td>
+         </h3>
+    </tr>      
+    <br>       
+                   <tr>
+         <h3>
+              <td>3. Runs scored by 10 batsmen in a one-day cricket match are given. Find the average run scored.
+                   23, 54, 08, 94, 60, 18, 29, 44, 05, 86
+              </td>
+         </h3>
+        
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP3" value="a" required> a) 42.1
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP3" value="b) 55.32">  b) 55.32
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP3" value="c) 43.6 ">  c) 43.6  
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP3" value="d) 39.9 ">  d) 39.9
+              </td>
+         </h3>
+    
+    </tr> 
+    <br>                       
+    <tr>
+         <h3>
+              <td>4. Accuracy refers to how closely a calculated value agrees with ______.</td>
+         </h3>
+        
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP4" value="a) Each other"> a) Each other
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP4" value="b" required>  b) True value
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP4" value="c) No other value ">  c) No other value  
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP4" value="d) Same value ">  d) Same value  
+              </td>
+         </h3>
+    
+    </tr> 
+    <br>  
+     <tr>
+         <h3>
+              <td>5. Precision refers to how closely a calculated value agrees with ______.</td>
+         </h3>
+        
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP5" value="a" required> a) Each other
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP5" value="b) True value">  b) True value
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP5" value="c) No other value ">  c) No other value  
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP5" value="d) Same value ">  d) Same value  
+              </td>
+         </h3>
+    
+    </tr> 
+    <br> 
+     <tr>
+         <h3>
+              <td>6. What is the value of (-5) * (-7)?</td>
+         </h3>
+        
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP6" value="a" required>  a) 35
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP6" value="b) 42">  b) 42
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP6" value="c) -35 ">  c) -35  
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP6" value="d) -42">  d) -42  
+              </td>
+         </h3>
+    
+    </tr> 
+    <br>                     
+    <tr>
+         <h3>
+              <td>7. Five years ago the ratio between ages of Meena and Sita was 3:4. After five years from now the ratio between their ages will be 5:6. Find the present age of Meena?</td>
+         </h3>
+        
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP7" value=" a) 22 years">  a) 22 years
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP7" value="b) 25 years">  b) 25 years
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP7" value="c) 15 years ">  c) 15 years  
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP7" value="d" required> d) 20 years  
+              </td>
+         </h3>
+    
+    </tr> 
+    <br>                 
+    <tr>
+         <h3>
+              <td>8. What is 7/20 as decimal?</td>
+         </h3>
+        
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP8" value="a" required>  a) 0.35
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP8" value="b) 0.34">  b) 0.34
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP8" value="c) 0.21">  c) 0.21 
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP8" value="d) 0.30"> d) 0.30  
+              </td>
+         </h3>
+    
+    </tr> 
+    <br>       
+     <tr>
+         <h3>
+              <td>9. Find the factors of 3m^2 +9m +6</td>
+         </h3>
+        
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP9" value="a">  a) -1, -2
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP9" value="b) -2, -3">  b) -2, -3
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP9" value="c) -1, -3 ">  c) -1, -3
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP9" value="d) -2, 3"> d) -2, 3  
+              </td>
+         </h3>
+    
+    </tr> 
+    <br>      
+    <tr>
+         <h3>
+              <td>10. Three numbers are in ratio of 2:3:4 and their L.C.M is 240. What is their H.C.F?</td>
+         </h3>
+        
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP10" value=" a) 40">  a) 40
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP10" value="b" required>  b) 20
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP10" value="c) 10 ">  c) 10
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP10" value="d) 30"> d) 30  
+              </td>
+         </h3>
+    
+    </tr> 
+    <br>      
+    <tr>
+         <h3>
+              <td>11. She has been studying ______ two hours.</td>
+         </h3>
+        
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP11" value="a" required>  a) For
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP11" value="b) Since">  b) Since
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP11" value="c) From ">  c) From
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP11" value="d) Till"> d) Till  
+              </td>
+         </h3>
+    
+    </tr> 
+    <br>     
+        <tr>
+         <h3>
+              <td>12. Identify the grammatically CORRECT sentence from the given choices</td>
+         </h3>
+        
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP12" value=" a) The woman to who I sold my house was a doctor">  a) The woman to who I sold my house was a doctor
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP12" value="b) The woman that I sell my house was a doctor">  b) The woman that I sell my house was a doctor
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP12" value="c" required>  c) The woman to whom I sold my house was a doctor
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP12" value="d) The woman who the house I sold to was a doctor"> d) The woman who the house I sold to was a doctor  
+              </td>
+         </h3>
+    
+    </tr> 
+    <br> 
+      <tr>
+         <h3>
+              <td>13. He has not recovered fully _______the shock of his failure.</td>
+         </h3>
+        
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP13" value=" a) Against">  a) Against
+                                </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP13" value="b" required>  b) From
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP13" value="c) Of ">  c) Of
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP13" value="d) Off"> d) Off  
+              </td>
+         </h3>
+    
+    </tr> 
+    <br>  
+          <tr>
+         <h3>
+              <td>14. Choose the exact opposite of <b>Rebuked</td>
+         </h3>
+        
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP14" value=" a) awarded">  a) awarded
+                                </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP14" value="b) invited">  b) invited
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP14" value="c) received ">  c) received
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP14" value="d" required> d) praised  
+              </td>
+         </h3>
+    
+    </tr> 
+    <br>      
+
+          <tr>
+         <h3>
+              <td>15. Animate: Find the synonym</td>
+         </h3>
+        
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP15" value=" a) Kill">  a) Kill
+                                </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP15" value="b) Dead">  b) Dead
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP15" value="c" required>  c) Energize
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP15" value="d) Calm"> d) Calm  
+              </td>
+         </h3>
+    
+    </tr> 
+    <br>      
+    <tr>
+         <h3>
+              <td>16. You are a department manager and you have recently thought of a new procedure that you believe would improve the work process. Some of the employees in your department agree with the change and some do not. One of your employees openly criticizes the idea to your director. <br>
+What would you do and why? 
+<br>
+Choose one option.
+</td>
+         </h3>
+        
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP16" value=" a) You decide not to respond to the critics in order to avoid unnecessary conflict">  a) You decide not to respond to the critics in order to avoid unnecessary conflict
+                                </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP16" value="b) You reprimand the employee for going over your head to the director and work to promote your idea with even more enthusiasm.">  b) You reprimand the employee for going over your head to the director and work to promote your idea with even more enthusiasm.
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP16" value="c" required >  c) You meet the employee for talk and explain that bypassing your authority is unacceptable.
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP16" value="d) Employees trust in their manager is important so you decide to implement only some of the changes to keep my employees satisfied."> d) Employees trust in their manager is important so you decide to implement only some of the changes to keep my employees satisfied.  
+              </td>
+         </h3>
+    
+    </tr> 
+    <br> 
+    <tr>
+         <h3>
+              <td>17. If in ty examination hall, you find that the question paper is tough to be answered satisfactorily by you, the best thing to do for you is to:</td>
+         </h3>
+        
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP17" value=" a) Tell the examiner provoke that the questions are out of course ">  a) Tell the examiner provoke that the questions are out of course 
+                                </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP17" value="b) Provoke the candidates to walk out of the examination hall">  b) Provoke the candidates to walk out of the examination hall
+              </td>
+         </h3>
+          <h3>
+              <td>
+                   <input type="radio" name="GROUP17" value="c) Try to know something from neighbour"> c) Try to know something from neighbour  
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP17" value="d" required>  d) Try to solve the question as much as you know with a cool head
+              </td>
+         </h3>
+        
+    
+    </tr> 
+    <br>  
+
+          <tr>
+         <h3>
+              <td>18. While you find a suitcase beneath your seat. You would:</td>
+         </h3>
+        
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP18" value="a" required>  a) Report the matter to the police
+                                </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP18" value="b) Open up the suitcase to look through its contents.">  b) Open up the suitcase to look through its contents
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP18" value="c) Try to find out the address of the owner from the papers etc, in suitcase ">  c) Try to find out the address of the owner from the papers etc, in suitcase
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP18" value="d) Finding no one to claim it, take it into your own possession"> d) Finding no one to claim it, take it into your own possession  
+              </td>
+         </h3>
+    
+    </tr> 
+    <br> 
+    <tr>
+         <h3>
+              <td>19. You are interviewed for a new job. Which of the following questions is most important to you?</td>
+         </h3>
+        
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP19" value=" a) Opportunities for promotions">  a) Opportunities for promotions
+                                </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP19" value="b) Remuneration you will be paid">  b) Remuneration you will be paid
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP19" value="c) Scope to develop your ideas and use them to improve the working of the organization">  c) Scope to develop your ideas and use them to improve the working of the organization.
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP19" value="d" required> d) All the above are equally important  
+              </td>
+         </h3>
+    
+    </tr> 
+    <br>     
+    <tr>
+         <h3>
+              <td>20. You are a team leader and you are supposed to hold a convention on HR issue. But your team members are unable to get adequate sponsorship. </td>
+         </h3>
+        
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP20" value="a) You put in your money and hold the event as scheduled">  a) You put in your money and hold the event as scheduled
+                                </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP20" value="b" required>  b) You try and motivate them that they can do it
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP20" value="c) You postpone the event and give them some more time ">  c) You postpone the event and give them some more time
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP20" value="d) You tell them things can work out like this and cancel the event"> d) You tell them things can work out like this and cancel the event  
+              </td>
+         </h3>
+    
+    </tr> 
+    <br>      
+    <tr>
+         <h3>
+              <td>21. While travelling in your car, certain person’s stop you on the way asking you to take an injured child to the hospital. You would:</td>
+         </h3>
+        
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP21" value="a) Ask them to leave your way and then drive away">  a) Ask them to leave your way and then drive away
+                                </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP21" value="b) Ask them to first call the police">  b) Ask them to first call the police
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP21" value="c" required>  c) Immediately take the child to hospital
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP21" value="d) Get out of the ask some other person to help to take the child to hospital"> d) Get out of the ask some other person to help to take the child to hospital  
+              </td>
+         </h3>
+    
+    </tr> 
+    <br>      
+    <tr>
+         <h3>
+              <td>22. Main objective of educational guide is to bring what change in the pupil</td>
+         </h3>
+        
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP22" value=" a) Psychological development of the child">  a) Psychological development of the child
+                                </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP22" value="b) Responsibility of self direction">  b) Responsibility of self direction
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP22" value="c" required>  c) Both the above
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP22" value="d) None of the above"> d) None of the above  
+              </td>
+         </h3>
+    
+    </tr> 
+    <br>      
+    <tr>
+         <h3>
+              <td>23. Which of following should be considered the most important quality of a teacher at primary level?</td>
+         </h3>
+        
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP23" value=" a) Eagerness to teach">  a) Eagerness to teach
+                                </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP23" value="b" required>  b) Patience and perseverance
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP23" value="c) Competence in method of teaching and knowledge of subjects ">  c) Competence in method of teaching and knowledge of subjects
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP23" value="d) Competence to teach in highly standardized language"> d) Competence to teach in highly standardized language  
+              </td>
+         </h3>
+    
+    </tr> 
+    <br>      
+    <tr>
+         <h3>
+              <td>24. You are a social worker and you visit an orphanage, then one child who is not ready to let you go away</td>
+         </h3>
+        
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP24" value=" a) You decide to visit him every Sunday">  a) You decide to visit him every Sunday
+                                </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP24" value="b) You leave with no concern">  b) You leave with no concern
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP24" value="c) You ignore the child because you have other kids to attend ">  c) You ignore the child because you have other kids to attend
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP24" value="d" required> d) You talk to the authorities and arrange for parents who can adopt him  
+              </td>
+         </h3>
+    
+    </tr> 
+    <br>      
+    <tr>
+         <h3>
+              <td>25. Which of the following is not a sign of an intelligent young child?</td>
+         </h3>
+        
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP25" value="a" required>  a) One who has ability to cram along long essays very quickly
+                                </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP25" value="b) One who has the ability to communicate fluently and appropriately" required>  b) One who has the ability to communicate fluently and appropriately
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP25" value="c) One who carries on thinking in abstract manner " required>  c) One who carries on thinking in abstract manner
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP25" value="d) One who can adjust oneself in a new environment" required> d) One who can adjust oneself in a new environment  
+              </td>
+         </h3>
+    
+    </tr> 
+    <br>
+     <tr>
+         <h3>
+              <td>26.  How many triangles are there in the given figure?</td>
+              <img src="{% static 'images/25.jpg'%}" class="img-responsive">
+         </h3>
+        
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP26" value="a" required>  a) 9
+                                </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP26" value="b) 13" required>  b) 13
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP26" value="c) 16 " required>  c) 16
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP26" value="d) 11" required> d) 11  
+              </td>
+         </h3>
+    
+    </tr> 
+    <br>      
+     <tr>
+         <h3>
+              <td>27. Start at one of the corner letters and move clockwise around the square finishing in the centre to create a nine-letter word.</td>
+              <img src="{% static 'images/27.jpg'%}" class="img-responsive">
+         </h3>
+        
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP27" value="a" required>  a) EDUCATION
+                                </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP27" value="b) EDUCATED" required>  b) EDUCATED
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP27" value="c) CEMENTRY " required>  c) CEMENTRY
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP27" value="d) ICESTOLEN" required> d) ICESTOLEN  
+              </td>
+         </h3>
+    
+    </tr> 
+    <br>      
+     <tr>
+         <h3>
+              <td>28. Which figure is identical to the first?</td>
+              <img src="{% static 'images/28a.jpg'%}" class="img-responsive">
+              <img src="{% static 'images/28b.jpg'%}" class="img-responsive">
+         </h3>
+        
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP28" value="a" required>  a) a
+                                </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP28" value="b) b" required>  b) b
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP28" value="c) c " required>  c) c
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP28" value="d) d" required> d) d  
+              </td>
+         </h3>
+    
+    </tr> 
+    <br>      
+     <tr>
+         <h3>
+              <td>29. Which of the examples matches the shape when joined together by corresponding letters?</td>
+              <img src="{% static 'images/29a.jpg'%}" class="img-responsive">
+              <img src="{% static 'images/29b.jpg'%}" class="img-responsive">
+         </h3>
+        
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP29" value=" a) a" required>  a) a
+                                </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP29" value="b" required>  b) b
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP29" value="c) c " required>  c) c
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP29" value="d) None of the above" required> d) None of the above  
+              </td>
+         </h3>
+    
+    </tr> 
+    <br>      
+     <tr>
+         <h3>
+              <td>30.  Which of the given shapes is the rotation of the main image?</td>
+              <img src="{% static 'images/30.jpg'%}" class="img-responsive">
+         </h3>
+        
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP30" value=" a) A" required>  a) A
+                                </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP30" value="b) B" required>  b) B
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP30" value="c) C " required>  c) C
+              </td>
+         </h3>
+         <h3>{{message}}
+              {{x}}
+              <td>
+                   <input type="radio" name="GROUP30" value="d" required> d) D  
+              </td>
+         </h3>
+    
+    </tr> 
+    <br>                           
+             
+           <br>
+           <h4>
+               <input type = "Submit" name="Submit">
+           </h4>
+                                   </div>
+                                    
+                              </div>
+
+                         
+
+               </div>
+          </div>
+     </section> 
+
+     </form>
+
+
+
+
+
+
+
+     <!-- FOOTER -->
+     <footer id="footer">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-4 col-sm-6">
+                         <div class="footer-info">
+                              <div class="section-title">
+                                   <h2>Address</h2>
+                              </div>
+                              <address>
+                                   <p>C. V. Raman College of Engineering <br> Bhubaneswar, Odisha</p>
+                              </address>
+
+                              <ul class="social-icon">
+                                   <li><a href="https://www.linkedin.com/school/cv-raman-college-of-engineering-cvrce-bhubaneswar/about"class="fa fa-linkedin"></a></li>
+                                   <li><a href="https://cgu-odisha.ac.in/" class="fa fa-google"></a></li>
+                                   <li><a href="https://www.instagram.com/cvrgu_timeline/" class="fa fa-instagram"></a></li>
+                              </ul>
+
+                              <div class="copyright-text"> 
+                                   <p>Copyright &copy; 2020 Team Braniacs_1.0</p>
+                                   
+                                   <p>Smart India Hackathon</p>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                         <div class="footer-info">
+                              <div class="section-title">
+                                   <h2>Contact Info</h2>
+                              </div>
+                              <address>
+                                   <p>+91 8847841320, +91 0657 2314074</p>
+                                   <p><a href="mailto:taniyaghosh2209@gmail.com">taniyaghosh2209@gmail.com</a></p>
+                              </address>
+
+                              <div class="footer_menu">
+                                   <h2>Quick Links</h2>
+                                   <ul>
+                                        <li><a href="#courses">Career</a></li>
+                                        <li><a href="#">School Students</a></li>
+                                        <li><a href="#">Graduates</a></li>
+                                        <li><a href="#">Dropouts</a></li>
+                                   </ul>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-12">
+                         <div class="footer-info newsletter-form">
+                              <div class="section-title">
+                                   <h2>Know more about our Psychometric Analyst</h2>
+                              </div>
+                             <ul>
+                                        <li><a href="https://onelife.net.in/" >   One Life</a></li>
+                                        
+                                   </ul>
+                         </div>
+                    </div>
+                    
+               </div>
+          </div>
+     </footer>
+
+
+     <!-- SCRIPTS -->
+     <script src="{% static 'js/jquery.js'%}"></script>
+     <script src="{% static 'js/bootstrap.min.js'%}"></script>
+     <script src="{% static 'js/owl.carousel.min.js'%}"></script>
+     <script src="{% static 'js/smoothscroll.js'%}"></script>
+     <script src="{% static 'js/custom.js'%}"></script>
+  
+</body>
+</html>

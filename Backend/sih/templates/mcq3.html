@@ -1,0 +1,1075 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+     <title>MCQ3</title>
+<!-- 
+
+Known Template 
+
+https://templatemo.com/tm-516-known
+
+-->
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="author" content="">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
+     <link rel="stylesheet" href="{% static 'css/font-awesome.min.css'%}">
+     <link rel="stylesheet" href="{% static 'css/owl.carousel.css'%}">
+     <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css'%}">
+
+
+
+     <!-- MAIN CSS -->
+     <link rel="stylesheet" href="{% static 'css/mcq3.css'%}">
+     
+</head>
+<body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+     <form method="POST">
+          {% csrf_token %}
+
+     <!-- PRE LOADER -->
+     <section class="preloader">
+          <div class="spinner">
+
+               <span class="spinner-rotate"></span>
+               
+          </div>
+     </section>
+
+
+     <!-- MENU -->
+     <section class="navbar custom-navbar navbar-fixed-top" role="navigation">
+          <div class="container">
+
+               <div class="navbar-header">
+                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                    </button>
+
+                    <!-- lOGO TEXT HERE -->
+                    <a href="index" class="navbar-brand">Questrite</a>
+               </div>
+
+               <!-- MENU LINKS -->
+               <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-nav-first">
+                         <li><a href="index" class="smoothScroll">Home</a></li>
+                         <li><a href="about" class="smoothScroll">About Us</a></li>
+                         <li><a href="analyst" class="smoothScroll">Psychometric Analysts</a></li>
+                         <li><a href="ourservices" class="smoothScroll">Our Tests</a></li>
+                         <li><a href="reviews" class="smoothScroll">Reviews</a></li>
+                         <li><a href="contactus" class="smoothScroll">Contact Us</a></li>
+                         
+                         <li><a href="faqs" class="smoothScroll">FAQs</a></li>
+                         {% if user.is_authenticated %}
+                         <li>Hello, {{user.first_name}}</li>
+                         <li><a href="logout" class="smoothScroll">Log out</a></li>
+                         {% else %}
+                         <li><a href="signup" class="smoothScroll">Sign Up</a></li>
+                         {% endif %}
+
+                    </ul>
+
+                    
+               </div>
+
+          </div>
+     </section>
+
+     <h3 >
+         
+          <div style="text-align: right"  id="google_translate_element"></div>
+          </h3>
+     
+          <script type="text/javascript">
+          function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+          }
+          </script>
+          
+          <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+ <!-- TESTIMONIAL -->
+     <section id="testimonial">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-12 col-sm-12">
+                         
+                         
+                               <div class="section-title">
+                              <h2> Dropouts <small>All the best!</small></h2>
+                         </div>
+
+                              
+
+                        
+
+                              <div class="col-md-4 col-sm-4">
+                                   <div class="item">
+                                         <tr>
+         <h3>
+              <td>1. Suppose we have a function: -4x^2 + 4x + 3.Find the maximum or minimum of this function.</td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP1" value="a" required>  a) 42.1
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP1" value="b) 15"> b) 15
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP1" value="c) 14">  c) 14
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP1" value="d) 13  ">  d) 13
+              </td>
+         </h3>
+    </tr>
+    <br>
+                                      
+
+                             <tr>
+         <h3>
+              <td>2.  Accuracy refers to how closely a calculated value agrees with</td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP2" value=" a) Each other">  a) Each other
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP2" value="b" required> b) True value
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP2" value="c) No other value">  c) No other value
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP2" value="d) Same value ">  d) Same value
+              </td>
+         </h3>
+    </tr>      
+    <br>       
+                   <tr>
+         <h3>
+              <td>3.  Precision refers to how closely a calculated value agrees with ______.</td>
+         </h3>
+        
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP3" value="a" required> a) Each other
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP3" value="b) Same value">  b) Same value
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP3" value="c) No other value ">  c) No other value
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP3" value="d) True value">  d) True value
+              </td>
+         </h3>
+    
+    </tr> 
+    <br>                       
+    <tr>
+         <h3>
+              <td>4. The equation x^2 +3x+1= 0 is known as</td>
+         </h3>
+        
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP4" value="a" required> a) Algebraic equation
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP4" value="b) Polynomial equation">  b) Polynomial equation
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP4" value="c) Cubic equation ">  c) Cubic equation
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP4" value="d) Transcendental equation   "> d) Transcendental equation  
+         </h3>
+    
+    </tr> 
+    <br>  
+     <tr>
+         <h3>
+              <td>5. Study the pie chart below and answer the questions that follow:
+                <img src="{% static 'images/pie.jpg'%}" class="img-responsive"> 
+               The above pie chart shows the sales of four different types of articles in a shop. What is the difference between the central angle of C and D?
+              </td>
+         </h3>
+        
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP5" value="a" required> a) 126degrees
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP5" value="b) 43degrees ">  b) 43degrees
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP5" value="c) 120degrees"> c) 120degrees
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP5" value="d) 110degrees"> d) 110degrees
+              </td>
+         </h3>
+    
+    </tr> 
+    <br> 
+     <tr>
+          <h3>
+              <td>6. What is 3/11 divided by 18/44 to the smallest fraction?</td>
+         </h3>
+        
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP6" value=" a) 4/11">  a) 4/11
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP6" value="b) 8/11">  b) 8/11
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP6" value="c" required>  c) 2/3  
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP6" value="d) 3/4"> d) 3/4  
+              </td>
+         </h3>
+    
+    
+    </tr> 
+    <br>                     
+    <tr>
+         <h3>
+              <td>7. Five years ago the ratio between ages of Meena and Sita was 3:4. After five years from now the ratio between their ages will be 5:6. Find the present age of Meena?</td>
+         </h3>
+        
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP7" value=" a) 22 years">  a) 22 years
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP7" value="b) 25 years">  b) 25 years
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP7" value="c) 15 years ">  c) 15 years  
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP7" value="d" required> d) 20 years  
+              </td>
+         </h3>
+    
+    </tr> 
+    <br>                 
+    <tr>
+          <h3>
+              <td>8. Find the factors of 3m^2 +9m +6</td>
+         </h3>
+        
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP8" value="a" required>  a) -1, -2
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP8" value="b) -2, -3">  b) -2, -3
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP8" value="c) -1, -3 ">  c) -1, -3
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP8" value="d) -2, 3"> d) -2, 3  
+              </td>
+         </h3>
+    
+    </tr> 
+    <br>       
+     <tr>
+        <h3>
+              <td>9. What percentage of numbers from 1 to 70 have 1 or 9 in the unit's digit?</td>
+         </h3>
+        
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP9" value=" a) 1 ">  a) 1 
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP9" value="b) 14">  b) 14
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP9" value="c" required>  c) 20
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP9" value="d) 21"> d) 21  
+              </td>
+         </h3>
+    
+    
+    </tr> 
+    <br>      
+    <tr>
+         <h3>
+              <td>10. P, Q and R can do a piece of work in 18, 24 and 36 days on the second day and P on the third day,
+                    again R on the fourth day and so on. Then in how, many days will the work be completed?</td>
+         </h3>
+        
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP10" value=" a) 25">  a) 25
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP10" value="b" required>  b) 24
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP10" value="c) 22 ">  c) 22
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP10" value="d) 20"> d) 20  
+              </td>
+         </h3>
+    
+    </tr> 
+    <br>      
+    <tr>
+         <h3>
+              <td>11. Identify the grammatically CORRECT sentence</td>
+         </h3>
+        
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP11" value=" a) The woman to who I sold my house was a doctor">  a) The woman to who I sold my house was a doctor
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP11" value="b) The woman that I sell my house was a doctor.  "> b) The woman that I sell my house was a doctor.  
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP11" value="c" required>  c) The woman to whom I sold my house was a doctor
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP11" value="d) The woman who the house I sold to was a doctor"> d) The woman who the house I sold to was a doctor
+              </td>
+         </h3>
+    
+    </tr> 
+    <br>     
+        <tr>
+         <h3>
+              <td>12. Choose the exact opposite. Rebuked</td>
+         </h3>
+        
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP12" value=" a) awarded">  a) awarded
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP12" value="b) invited">  b) invited
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP12" value="c) received">  c) received
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP12" value="d" required> d) praised
+              </td>
+         </h3>
+    
+    </tr> 
+    <br> 
+      <tr>
+         <h3>
+              <td>13. He has not recovered fully _______the shock of his failure.</td>
+         </h3>
+        
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP13" value=" a) Against">  a) Against
+                                </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP13" value="b" required>  b) From
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP13" value="c) Of ">  c) Of
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP13" value="d) Off"> d) Off  
+              </td>
+         </h3>
+    
+    </tr> 
+    <br>  
+          <tr>
+         <h3>
+              <td>14. To pick holes:</td>
+         </h3>
+        
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP14" value=" a) To find some reason to quarrel">  a) To find some reason to quarrel
+                                </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP14" value="b) To destroy something">  b) To destroy something
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP14" value="c" required> c) To criticise someone
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP14" value="d) To cut some part of an item "> d) To cut some part of an item 
+              </td>
+         </h3>
+    
+    </tr> 
+    <br>      
+
+          <tr>
+         <h3>
+              <td>15. Animate: Find the synonym</td>
+         </h3>
+        
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP15" value=" a) Kill">  a) Kill
+                                </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP15" value="b) dead">  b) dead
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP15" value="c" required>  c) energize
+              </td>
+         </h3>
+         <h3>
+              <td>
+                   <input type="radio" name="GROUP15" value="d) calm"> d) calm  
+              </td>
+         </h3>
+    
+    </tr> 
+    <br>      
+    <tr>
+     <h3>
+          <td>16. You are a department manager and you have recently thought of a new procedure that you believe would improve the work process. Some of the employees in your department agree with the change and some do not. One of your employees openly criticizes the idea to your director.
+               What would you do and why? Choose one option.
+               </td>
+     </h3>
+    
+     <h3>
+          <td>
+               <input type="radio" name="GROUP16" value=" a) You decide not to respond to the critics in order to avoid unnecessary conflict.">  a) You decide not to respond to the critics in order to avoid unnecessary conflict.
+                            </td>
+     </h3>
+     <h3>
+          <td>
+               <input type="radio" name="GROUP16" value="b) You reprimand the employee for going over your head to the director and work to promote your idea with even more enthusiasm.">  b) You reprimand the employee for going over your head to the director and work to promote your idea with even more enthusiasm.
+          </td>
+     </h3>
+     <h3>
+          <td>
+               <input type="radio" name="GROUP16" value="c" required>  c) You meet the employee for talk and explain that bypassing your authority is unacceptable.
+          </td>
+     </h3>
+     <h3>
+          <td>
+               <input type="radio" name="GROUP16" value="d) Employees trust in their manager is important so you decide to implement only some of the changes to keep my employees satisfied."> d) Employees trust in their manager is important so you decide to implement only some of the changes to keep my employees satisfied.  
+          </td>
+     </h3>
+
+</tr> 
+<br>      
+<tr>
+     <h3>
+          <td>17. While you find a suitcase beneath your seat. You would:</td>
+     </h3>
+    
+     <h3>
+          <td>
+               <input type="radio" name="GROUP17" value="a" required>  a) Report the matter to the police
+                            </td>
+     </h3>
+     <h3>
+          <td>
+               <input type="radio" name="GROUP17" value="b) Open up the suitcase to look through its contents.">  b) Open up the suitcase to look through its contents.
+          </td>
+     </h3>
+     <h3>
+          <td>
+               <input type="radio" name="GROUP17" value="c) Try to find out the address of the owner from the papers etc., in suitcase ">  c) Try to find out the address of the owner from the papers etc., in suitcase
+          </td>
+     </h3>
+     <h3>
+          <td>
+               <input type="radio" name="GROUP17" value="d) Finding no one to claim it, take it into your own possession"> d) Finding no one to claim it, take it into your own possession.
+          </td>
+     </h3>
+
+</tr> 
+<br>      
+<tr>
+     <h3>
+          <td>18. You are interviewed for a new job. Which of the following questions is most important to you?</td>
+     </h3>
+    
+     <h3>
+          <td>
+               <input type="radio" name="GROUP18" value=" a) Opportunities for promotions.">  a) Opportunities for promotions.
+                            </td>
+     </h3>
+     <h3>
+          <td>
+               <input type="radio" name="GROUP18" value="b) Remuneration you will be paid.">  b) Remuneration you will be paid.
+          </td>
+     </h3>
+     <h3>
+          <td>
+               <input type="radio" name="GROUP18" value="c) Scope to develop your ideas and use them to improve the working of the organization. ">  c) Scope to develop your ideas and use them to improve the working of the organization.
+          </td>
+     </h3>
+     <h3>
+          <td>
+               <input type="radio" name="GROUP18" value="d" required> d) All the above are equally important.
+          </td>
+     </h3>
+
+</tr> 
+<br>      
+<tr>
+     <h3>
+          <td>19.Which expressions are likely to make someone like a stimulus more?</td>
+     </h3>
+    
+     <h3>
+          <td>
+               <input type="radio" name="GROUP19" value="a) Shaking their head">  a) Shaking their head
+                            </td>
+     </h3>
+     <h3>
+          <td>
+               <input type="radio" name="GROUP19" value="b" required>  b) Contracting the zygomaticus major (smiling) muscle
+          </td>
+     </h3>
+     <h3>
+          <td>
+               <input type="radio" name="GROUP19" value="c) Extending their arm ">  c) Extending their arm
+          </td>
+     </h3>
+     <h3>
+          <td>
+               <input type="radio" name="GROUP19" value="d) All of the above"> d) All of the above 
+          </td>
+     </h3>
+
+</tr> 
+<br>      
+<tr>
+     <h3>
+          <td>20. What type of behaviour might be predicted especially well by implicit measures?</td>
+     </h3>
+    
+     <h3>
+          <td>
+               <input type="radio" name="GROUP20" value="a" required>  a) A person’s tone of voice when talking with an outgroup member
+                            </td>
+     </h3>
+     <h3>
+          <td>
+               <input type="radio" name="GROUP20" value="b) A person’s ratings on a scale that measures their feelings of prejudice">  b) A person’s ratings on a scale that measures their feelings of prejudice
+          </td>
+     </h3>
+     <h3>
+          <td>
+               <input type="radio" name="GROUP20" value="c) What a person says to an outgroup member">  c) What a person says to an outgroup member
+          </td>
+     </h3>
+     <h3>
+          <td>
+               <input type="radio" name="GROUP20" value="d) All of the above"> d) All of the above
+          </td>
+     </h3>
+
+</tr> 
+<br>      
+<tr>
+     <h3>
+          <td>21. While travelling in your car, certain person’s stop you on the way asking you to take an injured child to the hospital. You would-</td>
+     </h3>
+    
+     <h3>
+          <td>
+               <input type="radio" name="GROUP21" value=" a) Ask them to leave your way and then drive away">  a)Ask them to leave your way and then drive away
+                            </td>
+     </h3>
+     <h3>
+          <td>
+               <input type="radio" name="GROUP21" value="b) Ask them to first call the police">  b) Ask them to first call the police
+          </td>
+     </h3>
+     <h3>
+          <td>
+               <input type="radio" name="GROUP21" value="c" required>  c) Immediately take the child to hospital
+          </td>
+     </h3>
+     <h3>
+          <td>
+               <input type="radio" name="GROUP21" value="d) Get out of the ask some other person to help to take the child to hospital"> d) Get out of the ask some other person to help to take the child to hospital  
+          </td>
+     </h3>
+
+</tr> 
+<br>      
+<tr>
+     <h3>
+          <td>22. Main objective of educational guide is to bring what change in the pupil _____.</td>
+     </h3>
+    
+     <h3>
+          <td>
+               <input type="radio" name="GROUP22" value=" a) Psychological development of the child">  a) Psychological development of the child
+                            </td>
+     </h3>
+     <h3>
+          <td>
+               <input type="radio" name="GROUP22" value="b) Responsibility of self-direction">  b) Responsibility of self-direction
+          </td>
+     </h3>
+     <h3>
+          <td>
+               <input type="radio" name="GROUP22" value="c" required>  c) Both the above
+          </td>
+     </h3>
+     <h3>
+          <td>
+               <input type="radio" name="GROUP22" value="d) None of the above"> d) None of the above
+          </td>
+     </h3>
+
+</tr> 
+<br>      
+<tr>
+     <h3>
+          <td>23. Which of following should be considered the most important quality of a teacher at primary level?</td>
+     </h3>
+    
+     <h3>
+          <td>
+               <input type="radio" name="GROUP23" value=" a) Eagerness to teach">  a) Eagerness to teach
+                            </td>
+     </h3>
+     <h3>
+          <td>
+               <input type="radio" name="GROUP23" value="b" required>  b) Patience and perseverance
+     </h3>
+     <h3>
+          <td>
+               <input type="radio" name="GROUP23" value="c) Competence in method of teaching and knowledge of subjects ">  c) Competence in method of teaching and knowledge of subjects
+          </td>
+     </h3>
+     <h3>
+          <td>
+               <input type="radio" name="GROUP23" value="d) Competence to teach in highly standardized language"> d) Competence to teach in highly standardized language
+          </td>
+     </h3>
+
+</tr> 
+<br>      
+<tr>
+     <h3>
+          <td>24. A social worker is receiving a client with long-standing depression. It becomes known that the client has racist beliefs. The social worker should:</td>
+     </h3>
+    
+     <h3>
+          <td>
+               <input type="radio" name="GROUP24" value=" a) respectfully confront the client’s prejudiced beliefs">  a) respectfully confront the client’s prejudiced beliefs
+                            </td>
+     </h3>
+     <h3>
+          <td>
+               <input type="radio" name="GROUP24" value="b) educate the client about the negative effects of racism">  b) educate the client about the negative effects of racism
+          </td>
+     </h3>
+     <h3>
+          <td>
+               <input type="radio" name="GROUP24" value="c) refer the client to another therapist who might have similar belief ">  c) refer the client to another therapist who might have similar belief
+          </td>
+     </h3>
+     <h3>
+          <td>
+               <input type="radio" name="GROUP24" value="d" required> d) respect the client’s beliefs and focus on the presenting problem
+          </td>
+     </h3>
+
+</tr> 
+<br>      
+<tr>
+     <h3>
+          <td>25. Parents continually refuse to communicate with their child who is in a residential treatment facility. The social worker should FIRST:</td>
+     </h3>
+    
+     <h3>
+          <td>
+               <input type="radio" name="GROUP25" value=" a) Respect the parents need for separation by not contacting them">  a) Respect the parents need for separation by not contacting them
+                            </td>
+     </h3>
+     <h3>
+          <td>
+               <input type="radio" name="GROUP25" value="b) Request that the child be discharged">  b) Request that the child be discharged
+          </td>
+     </h3>
+     <h3>
+          <td>
+               <input type="radio" name="GROUP25" value="c) Contact the parents about the child’s placement ">  c) Contact the parents about the child’s placement
+          </td>
+     </h3>
+     <h3>
+          <td>
+               <input type="radio" name="GROUP25" value="d" required> d) Assess the child’s response to the parent’s actions  
+          </td>
+     </h3>
+
+</tr> 
+<br>      
+<tr>
+     <h3>
+          <td>26. What comes next?</td>
+          <img src="{% static 'images/26a.jpg'%}" class="img-responsive"> 
+     </h3>
+    
+     <h3>
+          <td>
+               <input type="radio" name="GROUP26" value="a" required>  a) a
+                            </td>
+     </h3>
+     <h3>
+          <td>
+               <input type="radio" name="GROUP26" value="b) b">  b) b
+          </td>
+     </h3>
+     <h3>
+          <td>
+               <input type="radio" name="GROUP26" value="c) c ">  c) c
+          </td>
+     </h3>
+     <h3>
+          <td>
+               <input type="radio" name="GROUP26" value="d) d"> d) d  
+          </td>
+     </h3>
+
+</tr> 
+<br>      
+<tr>
+     <h3>
+          <td>27. How many triangles are there in the given figure?</td>
+          <img src="{% static 'images/25.jpg'%}" class="img-responsive">
+
+     </h3>
+    
+     <h3>
+          <td>
+               <input type="radio" name="GROUP27" value="a" required>  a) 9
+                            </td>
+     </h3>
+     <h3>
+          <td>
+               <input type="radio" name="GROUP27" value="b) 13">  b) 13
+          </td>
+     </h3>
+     <h3>
+          <td>
+               <input type="radio" name="GROUP27" value="c) 6">  c) 6
+          </td>
+     </h3>
+     <h3>
+          <td>
+               <input type="radio" name="GROUP27" value="d) 11"> d) 11
+          </td>
+     </h3>
+
+</tr> 
+<br>      
+<tr>
+     <h3>
+          <td>28. Which figure is identical to the first?</td>
+          <img src="{% static 'images/28a.jpg'%}" class="img-responsive">
+          <img src="{% static 'images/28b.jpg'%}" class="img-responsive">
+     </h3>
+    
+     <h3>
+          <td>
+               <input type="radio" name="GROUP28" value="a" required>  a) a
+                            </td>
+     </h3>
+     <h3>
+          <td>
+               <input type="radio" name="GROUP28" value="b) b">  b) b
+          </td>
+     </h3>
+     <h3>
+          <td>
+               <input type="radio" name="GROUP28" value="c) c ">  c) c
+          </td>
+     </h3>
+     <h3>
+          <td>
+               <input type="radio" name="GROUP28" value="d) d"> d) d  
+          </td>
+     </h3>
+
+</tr> 
+<br>      
+<tr>
+     <h3>
+          <td>29. Which option is suitable?</td>
+          <img src="{% static 'images/26.jpg'%}" class="img-responsive">
+     </h3>
+    
+     <h3>
+          <td>
+               <input type="radio" name="GROUP29" value=" a) a">  a) a
+                            </td>
+     </h3>
+     <h3>
+          <td>
+               <input type="radio" name="GROUP29" value="b" required>  b) b
+          </td>
+     </h3>
+     <h3>
+          <td>
+               <input type="radio" name="GROUP29" value="c) c ">  c) c
+          </td>
+     </h3>
+     <h3>
+          <td>
+               <input type="radio" name="GROUP29" value="d) d"> d) d  
+          </td>
+     </h3>
+
+</tr> 
+<br>      
+<tr>
+     <h3>
+          <td>30. <img src="{% static 'images/31.jpg'%}" class="img-responsive"></td>
+          
+     </h3>
+    
+     <h3>
+          <td>
+               <input type="radio" name="GROUP30" value=" a) 1">  a) 1
+                            </td>
+     </h3>
+     <h3>
+          <td>
+               <input type="radio" name="GROUP30" value="b" required>  b) 2
+          </td>
+     </h3>
+     <h3>
+          <td>
+               <input type="radio" name="GROUP30" value="c) 3 ">  c) 3
+          </td>
+     </h3>
+     <h3>
+          <td>
+               <input type="radio" name="GROUP30" value="d) 4"> d) 4  
+          </td>
+     </h3>
+
+</tr> 
+<br>      
+     
+<br>
+ <h4>
+     <input type = "Submit" name="Submit">
+ </h4>
+
+                                   </div>
+                                    
+                              </div>
+
+                         
+
+               </div>
+          </div>
+     </section> 
+
+     </form>
+
+
+
+
+
+
+     <!-- FOOTER -->
+     <footer id="footer">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-4 col-sm-6">
+                         <div class="footer-info">
+                              <div class="section-title">
+                                   <h2>Address</h2>
+                              </div>
+                              <address>
+                                   <p>C. V. Raman College of Engineering <br> Bhubaneswar, Odisha</p>
+                              </address>
+
+                              <ul class="social-icon">
+                                   <li><a href="https://www.linkedin.com/school/cv-raman-college-of-engineering-cvrce-bhubaneswar/about"class="fa fa-linkedin"></a></li>
+                                   <li><a href="https://cgu-odisha.ac.in/" class="fa fa-google"></a></li>
+                                   <li><a href="https://www.instagram.com/cvrgu_timeline/" class="fa fa-instagram"></a></li>
+                              </ul>
+
+                              <div class="copyright-text"> 
+                                   <p>Copyright &copy; 2020 Team Braniacs_1.0</p>
+                                   
+                                   <p>Smart India Hackathon</p>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                         <div class="footer-info">
+                              <div class="section-title">
+                                   <h2>Contact Info</h2>
+                              </div>
+                              <address>
+                                   <p>+91 8847841320, +91 0657 2314074</p>
+                                   <p><a href="mailto:taniyaghosh2209@gmail.com">taniyaghosh2209@gmail.com</a></p>
+                              </address>
+
+                              <div class="footer_menu">
+                                   <h2>Quick Links</h2>
+                                   <ul>
+                                        <li><a href="#courses">Career</a></li>
+                                        <li><a href="#">School Students</a></li>
+                                        <li><a href="#">Graduates</a></li>
+                                        <li><a href="#">Dropouts</a></li>
+                                   </ul>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-12">
+                         <div class="footer-info newsletter-form">
+                              <div class="section-title">
+                                   <h2>Know more about our Psychometric Analyst</h2>
+                              </div>
+                             <ul>
+                                        <li><a href="https://onelife.net.in/" >   One Life</a></li>
+                                        
+                                   </ul>
+                         </div>
+                    </div>
+                    
+               </div>
+          </div>
+     </footer>
+
+
+     <!-- SCRIPTS -->
+     <script src="{% static 'js/jquery.js'%}"></script>
+     <script src="{% static 'js/bootstrap.min.js'%}"></script>
+     <script src="{% static 'js/owl.carousel.min.js'%}"></script>
+     <script src="{% static 'js/smoothscroll.js'%}"></script>
+     <script src="{% static 'js/custom.js'%}"></script>
+
+
+
+
+ 
+  
+
+  
+</body>
+</html>

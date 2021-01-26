@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+     <title>Know your result</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+    google.charts.setOnLoadCallback(drawChart);
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+        ["Codes", "Score", { role: "style" } ],
+        ["Rialistic", 8.94, "#3f51b5"],
+        ["Inverstigative", 10.49, "#3f51b5"],
+        ["Artistic", 10.49, "#3f51b5"],
+        ["Social", 19.30, "#3f51b5"],
+        ["Enterprising", 21.45, "color: #3f51b5"],
+        ["Convetional", 21.45, "color: #3f51b5"]
+
+      ]);
+
+      var view = new google.visualization.DataView(data);
+      view.setColumns([0, 1,
+                       { calc: "stringify",
+                         sourceColumn: 1,
+                         type: "string",
+                         role: "annotation" },
+                       2]);
+
+      var options = {
+        title: "Marks in each section",
+        width: 600,
+        height: 600,
+        bar: {groupWidth: "95%"},
+        legend: { position: "none" },
+      };
+      var chart = new google.visualization.BarChart(document.getElementById("barchart_values"));
+      chart.draw(view, options);
+
+          function getValueAt(column, dataTable, row) {
+        return dataTable.getFormattedValue(row, column);
+      }
+  }
+    </script>
+<!-- 
+
+Known Template 
+
+https://templatemo.com/tm-516-known
+
+-->
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="author" content="">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+     <link rel="stylesheet" href="css/bootstrap.min.css">
+     <link rel="stylesheet" href="css/font-awesome.min.css">
+     <link rel="stylesheet" href="css/owl.carousel.css">
+     <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+
+
+     <!-- MAIN CSS -->
+     <link rel="stylesheet" href="css/resultp.css">
+     
+</head>
+<body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+
+     <!-- PRE LOADER -->
+     <section class="preloader">
+          <div class="spinner">
+
+               <span class="spinner-rotate"></span>
+               
+          </div>
+     </section>
+
+
+     <!-- MENU -->
+     <section class="navbar custom-navbar navbar-fixed-top" role="navigation">
+          <div class="container">
+
+               <div class="navbar-header">
+                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                    </button>
+
+                   <!-- lOGO TEXT HERE -->
+                    <a href="index.html" class="navbar-brand">Questrite</a>
+               </div>
+
+               <!-- MENU LINKS -->
+               <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-nav-first">
+                         <li><a href="index.html" class="smoothScroll">Home</a></li>
+                         <li><a href="about.html" class="smoothScroll">About Us</a></li>
+                         <li><a href="analyst.html" class="smoothScroll">Pychometric Analysts</a></li>
+                         <li><a href="ourservices.html" class="smoothScroll">Our Tests</a></li>
+                         <li><a href="reviews.html" class="smoothScroll">Reviews</a></li>
+                         <li><a href="contactus.html" class="smoothScroll">Contact Us</a></li>
+                         
+                         <li><a href="faqs.html" class="smoothScroll">FAQs</a></li>
+                         <li><a href="signup.html" class="smoothScroll">Sign Up</a></li>
+                    </ul>
+
+                   
+               </div>
+
+          </div>
+     </section>
+
+
+    
+    
+     <!-- ABOUT -->
+     <section id="about">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-6 col-sm-12">
+                         <div class="about-info">
+                              <h2> Know the category you fall in and start your journey to a better career planning :</h2>
+
+                              <figure>
+                                   <span><i class="fa fa-file-code-o" aria-hidden="true"></i></span>
+                                   <figcaption>
+                                        <h3>The RIASEC Code</h3>
+                                        <p>When you completed the Holand's personality test, you described what you like best—your favorite activities and interests. The personality types that
+match your activities and interests most frequently make up your RIASEC Code. Your RIASEC Code is a brief way of saying what you
+like—your combination of interests. </p>
+                                        <p>
+Based on your responses on the Personality Test, your RIASEC Code :
+<br>
+<b>ABC</b>
+</p>
+                                   </figcaption>
+                              </figure>
+
+                              <figure>
+                                   <span><i class="fa fa-briefcase" aria-hidden="true"></i></span>
+                                   <figcaption>
+                                        <h3>Exploring Careers</h3>
+                                        <p> Now that you have a better understanding of which personality types best represent your interests, it is time to think about how this is all related to
+careers.
+The following section includes a list of occupations based on your three-letter Summary Code of and its combinations
+<br>
+<b>ABC</b></p>
+                                   </figcaption>
+                              </figure>
+
+                             
+                         </div>
+                    </div>
+
+                    <div class="col-md-offset-1 col-md-4 col-sm-12">
+                        <div id="barchart_values" style="width: 1000px; height: 500px;"></div>
+
+                    </div>
+
+               </div>
+          </div>
+     </section>
+      
+
+     <!-- FOOTER -->
+     <footer id="footer">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-4 col-sm-6">
+                         <div class="footer-info">
+                              <div class="section-title">
+                                   <h2>Address</h2>
+                              </div>
+                              <address>
+                                   <p>C. V. Raman College of Engineering <br> Bhubaneshwar, Odissa</p>
+                              </address>
+
+                              <ul class="social-icon">
+                                   <li><a href="https://www.linkedin.com/school/cv-raman-college-of-engineering-cvrce-bhubaneswar/about"class="fa fa-linkedin"></a></li>
+                                   <li><a href="https://cgu-odisha.ac.in/" class="fa fa-google"></a></li>
+                                   <li><a href="https://www.instagram.com/cvrgu_timeline/" class="fa fa-instagram"></a></li>
+                              </ul>
+
+                              <div class="copyright-text"> 
+                                   <p>Copyright &copy; 2020 Team Braniacs_1.0</p>
+                                   
+                                   <p>Smart India Hackathon</p>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                         <div class="footer-info">
+                              <div class="section-title">
+                                   <h2>Contact Info</h2>
+                              </div>
+                              <address>
+                                   <p>+91 8847841320, +91 0657 2314074</p>
+                                   <p><a href="mailto:taniyaghosh2209@gmail.com">taniyaghosh2209@gmail.com</a></p>
+                              </address>
+
+                              <div class="footer_menu">
+                                   <h2>Quick Links</h2>
+                                   <ul>
+                                        <li><a href="#courses">Career</a></li>
+                                        <li><a href="#">School Students</a></li>
+                                        <li><a href="#">Graduates</a></li>
+                                        <li><a href="#">Dropouts</a></li>
+                                   </ul>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-12">
+                         <div class="footer-info newsletter-form">
+                              <div class="section-title">
+                                   <h2>Know more about our Psychometric Analyst</h2>
+                              </div>
+                             <ul>
+                                        <li><a href="https://onelife.net.in/" >   One Life</a></li>
+                                        
+                                   </ul>
+                         </div>
+                    </div>
+                    
+               </div>
+          </div>
+     </footer>
+
+
+     <!-- SCRIPTS -->
+     <script src="js/jquery.js"></script>
+     <script src="js/bootstrap.min.js"></script>
+     <script src="js/owl.carousel.min.js"></script>
+     <script src="js/smoothscroll.js"></script>
+     <script src="js/custom.js"></script>
+
+
+
+
+ 
+  
+
+  
+</body>
+</html>

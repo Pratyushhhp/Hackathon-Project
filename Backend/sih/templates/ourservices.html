@@ -1,0 +1,306 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+     <title>Our Services</title>
+<!-- 
+
+Known Template 
+
+https://templatemo.com/tm-516-known
+
+-->
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="author" content="">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
+     <link rel="stylesheet" href="{% static 'css/font-awesome.min.css'%}">
+     <link rel="stylesheet" href="{% static 'css/owl.carousel.css'%}">
+     <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css'%}">
+
+
+
+     <!-- MAIN CSS -->
+     <link rel="stylesheet" href="{% static 'css/ourservices.css'%}">
+     
+</head>
+<body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+
+     <!-- PRE LOADER -->
+     <section class="preloader">
+          <div class="spinner">
+
+               <span class="spinner-rotate"></span>
+               
+          </div>
+     </section>
+
+
+     <!-- MENU -->
+     <section class="navbar custom-navbar navbar-fixed-top" role="navigation">
+          <div class="container">
+
+               <div class="navbar-header">
+                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                    </button>
+
+                    <!-- lOGO TEXT HERE -->
+                    <a href="index" class="navbar-brand">Questrite</a>
+               </div>
+
+               <!-- MENU LINKS -->
+               <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-nav-first">
+                         <li><a href="index" class="smoothScroll">Home</a></li>
+                         <li><a href="about" class="smoothScroll">About Us</a></li>
+                         <li><a href="analyst" class="smoothScroll">Psychometric Analysts</a></li>
+                         <li><a href="#top" class="smoothScroll">Our Tests</a></li>
+                         <li><a href="reviews" class="smoothScroll">Reviews</a></li>
+                         <li><a href="contactus" class="smoothScroll">Contact Us</a></li>
+                         <li><a href="faqs" class="smoothScroll">FAQs</a></li>
+                         {% if user.is_authenticated %}
+                         <li>Hello, {{user.first_name}}</li>
+                         <li><a href="logout" class="smoothScroll">Log out</a></li>
+                         {% else %}
+                         <li><a href="signup" class="smoothScroll">Sign Up</a></li>
+                         {% endif %}
+                    </ul>
+
+                  
+               </div>
+
+          </div>
+     </section>
+
+     <h3 >
+         
+          <div style="text-align: right"  id="google_translate_element"></div>
+          </h3>
+     
+          <script type="text/javascript">
+          function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+          }
+          </script>
+          
+          <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+    
+ <!-- Services -->
+     <section id="courses">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-12 col-sm-12">
+                         <div class="section-title">
+                              <h2>Choose a test which suits you the best! <small>Upgrade your knowledge about yourself</small></h2>
+                         </div>
+
+                         <div class="owl-carousel owl-theme owl-courses">
+                              <div class="col-md-4 col-sm-4">
+                                   <div class="item">
+                                        <div class="courses-thumb">
+                                             <div class="courses-top">
+                                                  <div class="courses-image">
+                                                       <img src="{% static 'images/courses-image1.jpg'%}" class="img-responsive" alt="">
+                                                  </div>
+                                                  <div class="courses-date">
+                                                      <span><i class="fa fa-clock-o"></i> 48 Questions</span>
+                                                  </div>
+                                             </div>
+
+                                             <div class="courses-detail">
+                                                  <h3><a href="#">The Personality Test</a></h3>
+                                                  <p>It is a psychometric test designed for all age groups of people.</p>
+                                                  <p>It takes in accordance people's choices and interests rather than their aptitude and predict their career options. </p>
+                                                
+                                                  <h4><a href="personality">Begin the test</a></h4>
+                                             </div>
+
+                                           
+                                        </div>
+                                   </div>
+                              </div>
+
+                              <div class="col-md-4 col-sm-4">
+                                   <div class="item">
+                                        <div class="courses-thumb">
+                                             <div class="courses-top">
+                                                  <div class="courses-image">
+                                                       <img src="{% static 'images/t.jpg'%}" class="img-responsive" alt="">
+                                                  </div>
+                                                  <div class="courses-date">
+                                                       <span><i class="fa fa-clock-o"></i> 30 questions</span>
+                                                  </div>
+                                             </div>
+
+                                             <div class="courses-detail">
+                                                  <h3><a href="#">For Graduates</a></h3>
+                                                  <p>Graduates appear for the level two of the test.</p>
+                                                   <p>We understand that graduation is the major learning and implementing part of one’s career. Hence, a proper planning of the future and working according to the plan is really important.</p>
+                                                  <h4><a href="test2">Begin the test</a></h4>
+                                             </div>
+
+                                            
+                                        </div>
+                                   </div>
+                              </div>
+
+                              
+
+                              <div class="col-md-4 col-sm-4">
+                                   <div class="item">
+                                        <div class="courses-thumb">
+                                             <div class="courses-top">
+                                                  <div class="courses-image">
+                                                       <img src="{% static 'images/courses-image4.jpg'%}" class="img-responsive" alt="">
+                                                  </div>
+                                                  <div class="courses-date">
+                                                       
+                                                       <span><i class="fa fa-clock-o"></i> 30 Questions</span>
+                                                  </div>
+                                             </div>
+
+                                             <div class="courses-detail">
+                                                  <h3><a href="#">For School Students </a></h3>
+                                                  
+                                                  <p>We believe that students should fit their needs and interests from the beginning of their career.</p>
+
+                                                  <p>Knowing this, we offer students a better perspective in  terms of their career paths. We understand how crucial these years can be.</p>
+                                                  <h4><a href="test1">Begin the test</a></h4>
+                                             </div>
+
+                                             
+                                        </div>
+                                   </div>
+                              </div>
+
+                              <div class="col-md-4 col-sm-4">
+                                   <div class="item">
+                                        <div class="courses-thumb">
+                                             <div class="courses-top">
+                                                  <div class="courses-image">
+                                                       <img src="{% static 'images/courses-image5.jpg'%}" class="img-responsive" alt="">
+                                                  </div>
+                                                  <div class="courses-date">
+                                                  
+                                                       <span><i class="fa fa-clock-o"></i> 30 Questions</span>
+                                                  </div>
+                                             </div>
+
+                                             <div class="courses-detail">
+                                                  <h3><a href="#">For Dropouts</a></h3>
+                                                  <p>Success has no time limit. There is always the determination that matters.</p>
+                                                  <p>Our mission is to make people aware of their right skills so that they can achieve greater heights of success at any point.</p>
+                                                  <h4><a href="test3">Begin the test</a></h4>
+                                             </div>
+
+                                             
+                                        </div>
+                                   </div>
+                              </div>
+
+                         </div>
+
+               </div>
+          </div>
+     </section>
+
+
+
+
+     
+     
+     <!-- FOOTER -->
+     <footer id="footer">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-4 col-sm-6">
+                         <div class="footer-info">
+                              <div class="section-title">
+                                   <h2>Address</h2>
+                              </div>
+                              <address>
+                                   <p>C. V. Raman College of Engineering <br> Bhubaneswar, Odisha</p>
+                              </address>
+
+                              <ul class="social-icon">
+                                   <li><a href="https://www.linkedin.com/school/cv-raman-college-of-engineering-cvrce-bhubaneswar/about"class="fa fa-linkedin"></a></li>
+                                   <li><a href="https://cgu-odisha.ac.in/" class="fa fa-google"></a></li>
+                                   <li><a href="https://www.instagram.com/cvrgu_timeline/" class="fa fa-instagram"></a></li>
+                              </ul>
+
+                              <div class="copyright-text"> 
+                                   <p>Copyright &copy; 2020 Team Braniacs_1.0</p>
+                                   
+                                   <p>Smart India Hackathon</p>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                         <div class="footer-info">
+                              <div class="section-title">
+                                   <h2>Contact Info</h2>
+                              </div>
+                              <address>
+                                   <p>+91 8847841320, +91 0657 2314074</p>
+                                   <p><a href="mailto:taniyaghosh2209@gmail.com">taniyaghosh2209@gmail.com</a></p>
+                              </address>
+
+                              <div class="footer_menu">
+                                   <h2>Quick Links</h2>
+                                   <ul>
+                                        <li><a href="#courses">Career</a></li>
+                                        <li><a href="#">School Students</a></li>
+                                        <li><a href="#">Graduates</a></li>
+                                        <li><a href="#">Dropouts</a></li>
+                                   </ul>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-12">
+                         <div class="footer-info newsletter-form">
+                              <div class="section-title">
+                                   <h2>Know more about our Psychometric Analyst</h2>
+                              </div>
+                             <ul>
+                                        <li><a href="https://onelife.net.in/" >   One Life</a></li>
+                                        
+                                   </ul>
+                         </div>
+                    </div>
+                    
+               </div>
+          </div>
+     </footer>
+
+
+     <!-- SCRIPTS -->
+     <script src="{% static 'js/jquery.js'%}"></script>
+     <script src="{% static 'js/bootstrap.min.js'%}"></script>
+     <script src="{% static 'js/owl.carousel.min.js'%}"></script>
+     <script src="{% static 'js/smoothscroll.js'%}"></script>
+     <script src="{% static 'js/custom.js'%}"></script>
+
+
+
+
+ 
+  
+
+  
+</body>
+</html>
